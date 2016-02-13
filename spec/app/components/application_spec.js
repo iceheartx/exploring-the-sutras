@@ -9,12 +9,4 @@ describe('Application', () => {
     spyOn(TodoList.prototype, 'render').and.callThrough();
     ReactDOM.render(<Application Dispatcher={Dispatcher}/>, root);
   });
-
-  it('has a TodoAdder', () => {
-    expect('.todo-adder').toExist();
-  });
-
-  it('has a TodoList', () => {
-    expect('.todo-list').toExist();
-  });
 });
