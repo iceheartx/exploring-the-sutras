@@ -19,4 +19,5 @@ before_install:
   -in exploring-the-sutras-2155b0efcb90.json.enc -out exploring-the-sutras-2155b0efcb90.json
   -d
 - ssh-keygen -q -N "" -f ~/.ssh/google_compute_engine
+- gcloud components update preview app
 - gcloud -q preview app deploy app.yaml --set-default
