@@ -1,5 +1,6 @@
 language: node_js
 node_js: 5.5.0
+sudo: required
 install:
 - npm install -g npm@2.7.5
 - npm install
@@ -14,6 +15,7 @@ deploy:
   keyfile: ./exploring-the-sutras-2155b0efcb90.json
   project: exploring-the-sutras
 before_install:
+
 - openssl aes-256-cbc -K $encrypted_1a1c740e634b_key -iv $encrypted_1a1c740e634b_iv
   -in exploring-the-sutras-2155b0efcb90.json.enc -out ./exploring-the-sutras-2155b0efcb90.json
   -d
