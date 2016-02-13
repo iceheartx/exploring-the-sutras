@@ -2,7 +2,7 @@ const {compact} = require('../helpers/application_helper');
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const thenify = require('thenify');
-const runSequence = require('run-sequence');
+const runSequence = require('run-sequence').use(gulp);
 const {killDevServer} = require('../tasks/server');
 
 const getPort = thenify(require('portfinder').getPort);
