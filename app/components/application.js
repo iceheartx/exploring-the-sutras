@@ -9,7 +9,7 @@ const Header = require('./header');
 
 const kanjiblobData = require('./../sutras/heartsutra.js');
 const Sutra = require('./sutra.js');
-
+const Splash = require('./splash.js');
 
 
 class Application extends React.Component {
@@ -19,6 +19,17 @@ class Application extends React.Component {
 
     constructor(props, context) {
         super(props, context);
+        const view = props.view || 'splash';
+        switch (view) {
+            case 'splash':
+                module = <div className="row"><Splash /></div>
+                break;
+            case 'sutra':
+                module = <div className="row"><Sutra {...{kanjiblobData}} /></div>
+                break;
+            default:
+                break
+        }
     }
 
     render() {
@@ -27,9 +38,7 @@ class Application extends React.Component {
             <div className="page">
                 <Header {...{store}} />
                 <div className="container">
-                    <div className="row">
-                        <Sutra {...{kanjiblobData}} />
-                    </div>
+                    {module}
                 </div>
             </div>
         );

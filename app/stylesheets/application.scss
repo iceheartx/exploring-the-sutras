@@ -1,11 +1,13 @@
-@import '_layout';
-
-@import 'styleguide';
+@import './styleguide';
 
 @import './module/button';
-@import "base/measures";
+
+@import "./base/measures";
+
 @import "./module/kanjiblob";
 @import "./module/header";
+@import "./module/splash";
+
 @import "./layout/main";
 @import "./layout/two_column";
 
