@@ -1,83 +1,42 @@
-body {
-  font: 16px Verdana;
-}
+@import "base/colors";
 
 /***
-  title: Square buttons
-  section: Buttons
-  description: Very pretty square buttons
+  title: Colors
+  section: Base
+  description: Colors in the App
   example: |
-    <a href="" class="btn btn-small">button</a>
-    <a href="" class="btn btn-medium">button</a>
-    <a href="" class="btn btn-large">button</a>
+    <div class="bg-black swatch">black</div>
+    <div class="bg-gray swatch">gray</div>
+    <div class="bg-white swatch">white</div>
 ***/
 
-.btn{
-  display: inline-block;
-  padding: .3em .6em;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  background-color: darkslateblue;
-}
-.btn:hover{
-  background-color: #38306E;
-}
-.btn-small{
-  font-size: .8em;
-}
-.btn-medium{
-  font-size: 1em;
-}
-.btn-large{
-  font-size: 1.3em;
+.bg-black {
+  background-color: $black;
 }
 
-
-/***
-  title: Round buttons
-  section: Buttons
-  description: Very pretty rounded buttons
-  example: |
-    <a href="" class="btn btn-small btn-round">button</a>
-    <a href="" class="btn btn-medium btn-round">button</a>
-    <a href="" class="btn btn-large btn-round">button</a>
-***/
-
-.btn-round{
-  border-radius: 20px;
+.bg-gray {
+  background-color: $gray;
 }
 
-
-/***
-  title: Links
-  section: Buttons
-  id: btn-link
-  description: Very pretty rounded buttons
-  example:
-    <a href="" class="btn-link">button</a>
-***/
-
-.btn-link{
-  background: none;
-  color: darkslateblue;
-}
-.btn-link:hover{
-  text-decoration: none;
+.bg-white {
+  background-color: $white;
 }
 
-/***
-  title: Includes
-  section: Includes
-  description: Include example code from other items. You can refer to any attribute(set), like 'id'
-  example: |
-    <div class="btn-group">
-        <include title="Links" section="Buttons">
-        <include title="Links" section="Buttons">
-        <include id="btn-link">
-    </div>
-***/
-.btn-group .btn-link {
-  background: green;
+.swatch {
+  vertical-align: center;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  margin: 10px 0;
+  border: 1px solid $black;
+  text-shadow: 0 0 5px $white;
+  color: black;
 }
- 
+
+.fake-styleguide-bg {
+  height: 300px;
+}
+
+.fake-results-page-bg {
+  height: 600px;
+}

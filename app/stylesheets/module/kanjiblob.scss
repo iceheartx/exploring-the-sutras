@@ -1,0 +1,34 @@
+/***
+  title: kanjiBlob
+  section: blob
+  description: a blob of data related to a single kanji
+  example: |
+    <div class="container">
+      <div class="row">
+        <div class="blob col-xs-4">
+          <div class="kanji">心</div>
+          <div class="romaji">shin</div>
+          <div class="hiragana">しん</div>
+          <div class="english">heart</div>
+        </div>
+      </div>
+    </div>
+***/
+
+.blob {
+
+  border: 1px solid black;
+
+  .kanji {
+    border: 1px solid blue;
+  }
+  .romaji {
+    border: 1px solid green;
+  }
+  .hiragana {
+    border: 1px solid purple;
+  }
+  .english {
+    border: 1px solid red;
+  }
+}
