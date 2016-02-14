@@ -7,9 +7,18 @@ class sutra extends React.Component {
         const kanjiblobData = this.props.kanjiblobData;
         return (
             <div>
-                {kanjiblobData.sutra.map(function(kanjiBlob){
-                return <Kanjiblob {...kanjiBlob} />;
-            })}
+                <div className="row title">
+                    {kanjiblobData.title.map(function (kanjiBlob) {
+                        kanjiBlob.title='true';
+                        return <Kanjiblob {...kanjiBlob} />;
+                    })}
+                </div>
+
+                <div className="row">
+                    {kanjiblobData.sutra.map(function (kanjiBlob) {
+                        return <Kanjiblob {...kanjiBlob} />;
+                    })}
+                </div>
             </div>
         );
     }

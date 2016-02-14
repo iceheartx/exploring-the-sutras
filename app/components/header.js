@@ -4,7 +4,7 @@ const types = React.PropTypes;
 
 const LogoBar = () => (
   <div className="logo-bar">
-    <a href="/"><img {...{src: 'images/shin-red.png'}}/></a>
+    <a href="/" className="logo-button">献立</a>
   </div>
 );
 

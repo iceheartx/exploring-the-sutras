@@ -5,30 +5,55 @@
   example: |
     <div class="container">
       <div class="row">
+        <div class="blob col-xs-4 title">
+          <div class="kanji">心</div>
+          <div class="romaji">shin</div>
+          <div class="english">heart</div>
+          <div class="hiragana">しん</div>
+        </div>
+        <div class="row">
         <div class="blob col-xs-4">
           <div class="kanji">心</div>
           <div class="romaji">shin</div>
-          <div class="hiragana">しん</div>
           <div class="english">heart</div>
+          <div class="hiragana">しん</div>
         </div>
       </div>
     </div>
 ***/
 
+.row.title {
+  border-bottom: 3px solid $black;
+}
 .blob {
+  height: 70px;
+  color: black;
 
-  border: 1px solid black;
+  .title {
+    font-weight: bold;
+    border: 0px;
 
+  }
+
+  &:not(.title) {
+    border-bottom: 1px solid $black;
+    border-right: 1px solid $black;
+  }
   .kanji {
-    border: 1px solid blue;
+    color: $black;
+    font-weight: bold;
+    float: left;
   }
   .romaji {
-    border: 1px solid green;
-  }
-  .hiragana {
-    border: 1px solid purple;
+    float: right;
   }
   .english {
-    border: 1px solid red;
+    width : 100%;
+    clear: both;
+    text-align: center;
+    background: $gray;
+  }
+  .hiragana {
+    float: right;
   }
 }

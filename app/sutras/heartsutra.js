@@ -1,10 +1,10 @@
 const heartsutra = {
     title: [
-        {romaji: 'Maka', kanji: ' ', hiragana: 'まか'},
-        {romaji: 'Hannya', kanji: ' ', hiragana: 'はんにゃ'},
-        {romaji: 'Haramitta', kanji: ' ', hiragana: 'はらみった'},
-        {romaji: 'Shin', kanji: '心', hiragana: 'しん'},
-        {romaji: 'Gyo', kanji: ' ', hiragana: 'ぎょ'}
+        {romaji: 'Maka', kanji: ' ', hiragana: 'まか', english: '.'},
+        {romaji: 'Hannya', kanji: ' ', hiragana: 'はんにゃ', english: '.'},
+        {romaji: 'Haramitta', kanji: ' ', hiragana: 'はらみった', english: '.'},
+        {romaji: 'Shin', kanji: '心', hiragana: 'しん', english: 'heart'},
+        {romaji: 'Gyo', kanji: ' ', hiragana: 'ぎょ', english: '.'}
     ],
     sutra: [
         {romaji: 'kan', kanji: ' ', hiragana: 'かん', english: ' '},
@@ -95,7 +95,7 @@ const heartsutra = {
         {romaji: 'ni', kanji: ' ', hiragana: 'に', english: ' '},
         {romaji: 'bi', kanji: ' ', hiragana: 'び', english: ' '},
         {romaji: 'ze', kanji: ' ', hiragana: 'ぜ', english: ' '},
-        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: ' '},
+        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: 'heart'},
         {romaji: 'ni', kanji: ' ', hiragana: 'に', english: ' '},
         {romaji: 'mu', kanji: ' ', hiragana: 'む', english: ' '},
         {romaji: 'shiki', kanji: ' ', hiragana: 'しき', english: ' '},
@@ -158,7 +158,7 @@ const heartsutra = {
         {romaji: 'mit', kanji: ' ', hiragana: 'みっ', english: ' '},
         {romaji: 'ta', kanji: ' ', hiragana: 'た', english: ' '},
         {romaji: 'ko', kanji: ' ', hiragana: 'こ', english: ' '},
-        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: ' '},
+        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: 'heart'},
         {romaji: 'mu', kanji: ' ', hiragana: 'む', english: ' '},
         {romaji: 'ke', kanji: ' ', hiragana: 'け', english: ' '},
         {romaji: 'ge', kanji: ' ', hiragana: 'げ', english: ' '},
@@ -234,7 +234,7 @@ const heartsutra = {
         {romaji: 'is', kanji: ' ', hiragana: 'いっ', english: ' '},
         {romaji: 'sai', kanji: ' ', hiragana: 'さい', english: ' '},
         {romaji: 'ku', kanji: ' ', hiragana: 'く', english: ' '},
-        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: ' '},
+        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: 'heart'},
         {romaji: 'jitsu', kanji: ' ', hiragana: 'じつ', english: ' '},
         {romaji: 'fu', kanji: ' ', hiragana: 'ふ', english: ' '},
         {romaji: 'ko', kanji: ' ', hiragana: 'こ', english: ' '},
@@ -269,8 +269,9 @@ const heartsutra = {
         {romaji: 'ka', kanji: ' ', hiragana: 'か', english: ' '},
         {romaji: 'han', kanji: ' ', hiragana: 'はん', english: ' '},
         {romaji: 'nya', kanji: ' ', hiragana: 'にゃ', english: ' '},
-        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: ' '},
-        {romaji: 'gyo', kanji: ' ', hiragana: 'ぎょ', english: ' '}]
+        {romaji: 'shin', kanji: '心', hiragana: 'しん', english: 'heart'},
+        {romaji: 'gyo', kanji: ' ', hiragana: 'ぎょ', english: ' '}
+    ]
 };
 
 module.exports = heartsutra;
