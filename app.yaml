@@ -9,9 +9,9 @@ skip_files:
 
 handlers:
 
-- url: /(.*\.(html|css|js))
+- url: /(.*\.(html|css|js|svg|png))
   static_files: public/\1
-  upload: public/(.*\.(html|css|js))
+  upload: public/(.*\.(html|css|js|svg|png))
 
 - url: /
   static_files: public/index.html
