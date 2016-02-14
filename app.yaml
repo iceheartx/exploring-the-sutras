@@ -1,9 +1,11 @@
-runtime: custom
+# [START runtime]
+runtime: nodejs
 vm: true
-api_version: 1
+# [END runtime]
 
-manual_scaling:
-  instances: 1
+# Temporary setting to keep gcloud from uploading node_modules
+skip_files:
+ - ^node_modules$
 
 handlers:
 
