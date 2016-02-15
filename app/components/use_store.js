@@ -7,7 +7,6 @@ const useStore = Component => class extends React.Component {
     super(props, context);
     this.state = {
       store: {
-        todoItems: []
       }
     };
   }

@@ -10,25 +10,28 @@ const Header = require('./header');
 const kanjiblobData = require('./../sutras/heartsutra.js');
 const Sutra = require('./sutra.js');
 const Splash = require('./splash.js');
-
+let content;
 
 class Application extends React.Component {
     static propTypes = {
-        store: types.object.isRequired
+        store: types.object.isRequired,
+        view: types.string
     };
 
     constructor(props, context) {
         super(props, context);
         const view = props.view || 'splash';
+
         switch (view) {
             case 'splash':
-                module = <div className="row"><Splash /></div>
+                content = <div className="row"><Splash /></div>;
                 break;
             case 'sutra':
-                module = <div className="row"><Sutra {...{kanjiblobData}} /></div>
+                content = <div className="row"><Sutra {...{kanjiblobData}} /></div>;
                 break;
             default:
-                break
+                content = '';
+                break;
         }
     }
 
@@ -38,7 +41,7 @@ class Application extends React.Component {
             <div className="page">
                 <Header {...{store}} />
                 <div className="container">
-                    {module}
+                    {content}
                 </div>
             </div>
         );

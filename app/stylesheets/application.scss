@@ -1,9 +1,9 @@
 @import './styleguide';
 
-@import './module/button';
-
 @import "./base/measures";
+@import "./base/typography";
 
+@import './module/button';
 @import "./module/kanjiblob";
 @import "./module/header";
 @import "./module/splash";
@@ -18,3 +18,5 @@
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_responsive-utilities.scss';
 
 
+// 15 cols
+// characters per col : 4, 5, 13, 25, 26, 26, 26, 25, 26, 26, 26, 25, 13, 6, 4

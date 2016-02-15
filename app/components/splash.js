@@ -1,5 +1,4 @@
 const React = require('react');
-const types = React.PropTypes;
 
 class splash extends React.Component {
     render() {
