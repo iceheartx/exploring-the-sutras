@@ -49,6 +49,7 @@
     font-weight: bold;
     float: left;
   }
+
   .romaji {
     &.hidden {
       display: none;
@@ -56,15 +57,21 @@
 
     float: right;
   }
-  .english {
+  .characterNum {
     &.hidden {
       display: none;
     }
-
+    float: right;
+  }
+  .english {
     width: 100%;
     clear: both;
     text-align: center;
     background: $gray;
+
+    &.hidden {
+      display: none;
+    }
   }
   .hiragana {
     &.hidden {
