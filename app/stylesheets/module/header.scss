@@ -18,6 +18,7 @@ header {
 }
 
 .logo-bar {
+  overflow-x: scroll;
   padding: 0 30px;
   background-color: $black;
   height: $header-bar-height;
