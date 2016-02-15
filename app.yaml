@@ -2,6 +2,8 @@
 runtime: nodejs
 vm: true
 # [END runtime]
+env_variables:
+  NODE_ENV: 'production'
 
 # Temporary setting to keep gcloud from uploading node_modules
 skip_files:
