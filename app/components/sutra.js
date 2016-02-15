@@ -4,20 +4,20 @@ const Kanjiblob = require('./kanjiblob');
 
 class sutra extends React.Component {
     render() {
-        const kanjiblobData = this.props.kanjiblobData;
+        const {kanjiblobData, store} = this.props;
         return (
             <div>
                 <div className="row title">
                     {kanjiblobData.title.map(function (kanjiBlob) {
                         kanjiBlob.title='true';
-                        return <Kanjiblob {...kanjiBlob} />;
-                    })}
+                        return <Kanjiblob {...{kanjiBlob, store}} />;
+                    }, this)}
                 </div>
 
                 <div className="row">
                     {kanjiblobData.sutra.map(function (kanjiBlob) {
-                        return <Kanjiblob {...kanjiBlob} />;
-                    })}
+                        return <Kanjiblob {...{kanjiBlob, store}} />;
+                    }, this)}
                 </div>
             </div>
         );
@@ -25,7 +25,8 @@ class sutra extends React.Component {
 }
 
 sutra.propTypes = {
-    kanjiblobData: types.object.isRequired
+    kanjiblobData: types.object.isRequired,
+    store: types.object.isRequired
 };
 
 module.exports = sutra;

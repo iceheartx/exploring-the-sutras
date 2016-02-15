@@ -7,45 +7,84 @@ const useStore = require('./use_store');
 
 const Header = require('./header');
 
-const kanjiblobData = require('./../sutras/heartsutra.js');
+
 const Sutra = require('./sutra.js');
 const Splash = require('./splash.js');
 let content;
 
 class Application extends React.Component {
+
     static propTypes = {
         store: types.object.isRequired,
         view: types.string
     };
 
+    updateStore = function (callback) {
+        this.setState({store: callback(this.state)});
+    }.bind(this);
+
+    getStore = function () {
+        return this.state;
+    }.bind(this);
+
+    setStoreVal(key, val) {
+        this.updateStore(store => {
+            store[key] = val;
+            return store;
+        });
+    }
+
+
     constructor(props, context) {
         super(props, context);
-        const view = props.view || 'splash';
+        this.state = props.store;
+    };
 
+    setView() {
+        const view = this.state.view || 'splash';
+        const state = this.state;
         switch (view) {
             case 'splash':
                 content = <div className="row"><Splash /></div>;
                 break;
             case 'sutra':
-                content = <div className="row"><Sutra {...{kanjiblobData}} /></div>;
+                if (this.state.sutra) {
+                    const kanjiblobData = require('./../sutras/' + this.state.sutra + '.js');
+                    content = <div className="row"><Sutra {...{kanjiblobData, store: state}} /></div>;
+                } else {
+                    content='';
+                }
+
                 break;
             default:
                 content = '';
                 break;
         }
+        this.forceUpdate();
     }
 
+    onChangeSutra = function (event) {
+        if (event.currentTarget.type === 'checkbox') {
+            this.setStoreVal(event.currentTarget.name, event.currentTarget.checked);
+        } else {
+            this.setStoreVal(event.currentTarget.name, event.currentTarget.value);
+        }
+        this.setStoreVal('view', 'sutra');
+        this.setView();
+    }.bind(this);
+
     render() {
+
         const store = this.props;
         return (
             <div className="page">
-                <Header {...{store}} />
+                <Header {...{store, onChangeSutra: this.onChangeSutra}} />
                 <div className="container">
                     {content}
                 </div>
             </div>
         );
-    }
+    };
 }
 
 Bootstrap.init(useStore(Application));

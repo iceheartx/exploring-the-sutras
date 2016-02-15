@@ -8,70 +8,67 @@ class LogoBar extends React.Component {
     }
 
     render() {
+        const {onChangeSutra} = this.props;
         return (
             <div className={cx('row', 'logo-bar', (this.props.expandedMenu) ? 'expanded' : '' )}>
-                <div className="col-xs-3"><a href="/" className="logo-button" onClick={this.props.onClick}>献立</a></div>
-                {this.props.expandedMenu && <div className="col-xs-18">
-                    <div className="col-xs-8">
-                        <fieldset>
-                            <legend>Select a Sutra</legend>
-                            <select>
-                                <option>
-                                    Select One
-                                </option>
-                                <optgroup label="Maka Hannya Haramitta Shin Gyo">
-                                    <option value="yes">Heart of Great Perfect Wisdom Sutra</option>
-                                </optgroup>
-                                <optgroup label="Sandokai">
-                                    <option value="yes">Harmony of Difference and Equality</option>
-                                </optgroup>
-                                <optgroup label="Hokyo Zammai">
-                                    <option value="yes">Song of the Jewel Mirror Samadhi</option>
-                                </optgroup>
-                            </select>
-                        </fieldset>
-                    </div>
-                    <div className="col-xs-8">
-                        <fieldset>
-                            <legend>Display</legend>
-                            <label>
-                                <input type="checkbox"/>Kanji
-                            </label>
-                            <label>
-                                <input type="checkbox"/>Hiragana
-                            </label>
-                            <label>
-                                <input type="checkbox"/>Romaji
-                            </label>
-                            <label>
-                                <input type="checkbox"/>English
-                            </label>
-                            <label>
-                                <input type="checkbox"/>Character #
-                            </label>
-                        </fieldset>
-                    </div>
-                    <div className="col-xs-7">
-                        <fieldset>
-                            <legend>Layout</legend>
-                            <label>
-                                <input type="radio"/>English
-                            </label>
-                            <label>
-                                <input type="radio"/>Kanji
-                            </label>
+                <div className="col-xs-3"><a href="/" alt="menu"
+                                             className={cx('logo-button', (this.props.expandedMenu) ? 'expanded' : '' )}
+                                             onClick={this.props.onClick}>献立</a></div>
 
-                        </fieldset>
-                    </div>
+                <div className={cx('col-xs-18', (this.props.expandedMenu) ? '' : 'hidden' )}>
+                    <fieldset className="col-xs-8">
+                        <legend>Select a Sutra</legend>
+                        <select name="sutra" onChange={onChangeSutra}>
+                            <option>Select One</option>
+                            <optgroup label="Maka Hannya Haramitta Shin Gyo">
+                                <option value="heartsutra">Heart of Great Perfect Wisdom Sutra</option>
+                            </optgroup>
+                            <optgroup label="Sandokai">
+                                <option disabled value="yes">Harmony of Difference and Equality</option>
+                            </optgroup>
+                            <optgroup label="Hokyo Zammai">
+                                <option disabled value="yes">Song of the Jewel Mirror Samadhi</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+                    <fieldset className="col-xs-8">
+                        <legend>Display</legend>
+                        <label>
+                            <input type="checkbox" name="displayKanji" value="1" onChange={onChangeSutra}/>Kanji
+                        </label>
+                        <label>
+                            <input type="checkbox" name="displayHiragana" onChange={onChangeSutra}/>Hiragana
+                        </label>
+                        <label>
+                            <input type="checkbox" name="displayRomaji" onChange={onChangeSutra}/>Romaji
+                        </label>
+                        <label>
+                            <input type="checkbox" name="displayEnglish" onChange={onChangeSutra}/>English
+                        </label>
+                        <label>
+                            <input type="checkbox" name="displayCharacterNum" onChange={onChangeSutra}/>Character #
+                        </label>
+                    </fieldset>
+                    <fieldset className="col-xs-7">
+                        <legend>Layout</legend>
+                        <label>
+                            <input type="radio"/>English
+                        </label>
+                        <label>
+                            <input type="radio"/>Kanji
+                        </label>
+
+                    </fieldset>
                 </div>
-                }
+
             </div>
         );
     }
 }
 LogoBar.propTypes = {
     onClick: types.func.isRequired,
-    expandedMenu: types.bool
+    expandedMenu: types.bool,
+    onChangeSutra: types.func.isRequired
 };
 
 
@@ -93,14 +90,19 @@ class Header extends React.Component {
         const {store: {}} = this.props;
         return (
             <header>
-                <LogoBar {...{expandedMenu: this.state.expandedMenu, onClick: this.toggleExpandMenu}} />
+                <LogoBar {...{
+                    expandedMenu: this.state.expandedMenu,
+                    onClick: this.toggleExpandMenu,
+                    onChangeSutra: this.props.onChangeSutra
+                }} />
             </header>
         );
     }
 }
 
 Header.propTypes = {
-    store: types.object.isRequired
+    store: types.object.isRequired,
+    onChangeSutra: types.func.isRequired
 };
 
 module.exports = Header;

@@ -23,12 +23,13 @@
 ***/
 
 .row.title {
+  width: 100%;
   border-bottom: 3px solid $black;
 }
+
 .blob {
   height: 70px;
   color: black;
-
   .title {
     font-weight: bold;
     border: 0px;
@@ -40,20 +41,36 @@
     border-right: 1px solid $black;
   }
   .kanji {
+    &.hidden {
+      display: none;
+    }
+
     color: $black;
     font-weight: bold;
     float: left;
   }
   .romaji {
+    &.hidden {
+      display: none;
+    }
+
     float: right;
   }
   .english {
-    width : 100%;
+    &.hidden {
+      display: none;
+    }
+
+    width: 100%;
     clear: both;
     text-align: center;
     background: $gray;
   }
   .hiragana {
+    &.hidden {
+      display: none;
+    }
+
     float: right;
   }
 }
