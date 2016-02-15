@@ -34,12 +34,6 @@ class Application extends React.Component {
         });
     }
 
-
-    constructor(props, context) {
-        super(props, context);
-        this.state = props.store;
-    };
-
     setView() {
         const view = this.state.view || 'splash';
         const state = this.state;
@@ -69,9 +63,18 @@ class Application extends React.Component {
         } else {
             this.setStoreVal(event.currentTarget.name, event.currentTarget.value);
         }
-        this.setStoreVal('view', 'sutra');
-        this.setView();
+        if (this.state.sutra) {
+            this.setStoreVal('view', 'sutra');
+            this.setView();
+        }
     }.bind(this);
+
+    constructor(props, context) {
+        super(props, context);
+        this.state = props.store;
+
+        this.setView();
+    };
 
     render() {
 
