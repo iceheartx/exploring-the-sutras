@@ -52,10 +52,10 @@ class LogoBar extends React.Component {
                     <fieldset className="col-xs-7">
                         <legend>Layout</legend>
                         <label>
-                            <input type="radio"/>English
+                            <input type="radio" name="layout" value="english"/>English
                         </label>
                         <label>
-                            <input type="radio"/>Kanji
+                            <input type="radio" name="layout" value="english"/>Kanji
                         </label>
 
                     </fieldset>

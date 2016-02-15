@@ -8,7 +8,7 @@ class kanjiblob extends React.Component {
         const classNames = cx('blob', (title === 'true') ? 'title col-xs-4' : 'col-xs-3');
         return (
             <div className={classNames}>
-                <div className={cx('kanji', (this.props.store.displayKanji !== true) ? 'hidden' : '') }>{kanji}</div>
+                <div className={cx('kanji', (this.props.store.displayKanji !== true) ? 'hidden' : '') }><a href={"https://en.wiktionary.org/wiki/"+kanji+"#Japanese"} target="new">{kanji}</a></div>
                 <div className={cx('romaji', (this.props.store.displayRomaji !== true) ? 'hidden' : '') }>{romaji}</div>
                 <div className={cx('english', (this.props.store.displayEnglish !== true) ? 'hidden' : '') }>{english}</div>
                 <div className={cx('hiragana', (this.props.store.displayHiragana !== true) ? 'hidden' : '') }>{hiragana}</div>
