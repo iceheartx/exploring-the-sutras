@@ -13,7 +13,7 @@ const useStore = Component => class extends React.Component {
                 displayRomaji: true,
                 displayEnglish: true,
                 displayCharacterNum: true,
-                view: 'sutra',
+                view: 'splash',
                 sutra: 'heartsutra'
             },
         }
