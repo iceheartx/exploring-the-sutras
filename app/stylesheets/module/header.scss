@@ -69,11 +69,18 @@ header {
     top: -5px;
     content: '\25BC';
   }
-
+  .col-xs-8 {
+    min-width: 227px;
+  }
+  .col-xs-5 {
+    min-width: 114px;
+  }
   .logo-button {
+    min-width: 112px;
+    display: inline-block;
     text-decoration: none;
     font-size: 30px;
-    padding: 5px;
+    padding: 1px;
     color: red;
     font-weight: bold;
     border-radius: 25%;

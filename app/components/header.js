@@ -11,10 +11,7 @@ class LogoBar extends React.Component {
         const {onChangeSutra} = this.props;
         return (
             <div className={cx('row', 'logo-bar', (this.props.expandedMenu) ? 'expanded' : '' )}>
-                <div className="col-xs-3"><a href="/" alt="menu"
-                                             className={cx('logo-button', (this.props.expandedMenu) ? 'expanded' : '' )}
-                                             onClick={this.props.onClick}>献立</a></div>
-
+                <a className={cx(, "col-xs-3",'logo-button', (this.props.expandedMenu) ? 'expanded' : '' )} onClick={this.props.onClick}>献立</a>
                 <div className={cx('col-xs-18', (this.props.expandedMenu) ? '' : 'hidden' )}>
                     <fieldset className="col-xs-8">
                         <legend>Select a Sutra</legend>
@@ -31,7 +28,7 @@ class LogoBar extends React.Component {
                             </optgroup>
                         </select>
                     </fieldset>
-                    <fieldset className="col-xs-8">
+                    <fieldset className="col-xs-5">
                         <legend>Display</legend>
                         <label>
                             <input type="checkbox" name="displayKanji" value="1" onChange={onChangeSutra}/>Kanji
@@ -49,7 +46,7 @@ class LogoBar extends React.Component {
                             <input type="checkbox" name="displayCharacterNum" onChange={onChangeSutra}/>Character #
                         </label>
                     </fieldset>
-                    <fieldset className="col-xs-7">
+                    <fieldset className="col-xs-5">
                         <legend>Layout</legend>
                         <label>
                             <input type="radio" name="layout" value="english"/>English
