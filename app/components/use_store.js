@@ -9,17 +9,16 @@ const useStore = Component => class extends React.Component {
         this.state = {
             store: {
                 displayKanji: true,
-                displayHiragana: true,
-                displayRomaji: true,
-                displayEnglish: true,
-                displayCharacterNum: true,
-                view: 'splash',
+                displayHiragana: false,
+                displayRomaji: false,
+                displayEnglish: false,
+                displayCharacterNum: false,
+                view: 'sutra',
                 sutra: 'heartsutra'
             },
         }
         ;
     }
-    //romaji: 'satsu', kanji: '薩', hiragana: 'さつ', english: 'sattva'},
 
     render() {
         const props = this.props;
