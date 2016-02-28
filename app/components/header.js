@@ -28,7 +28,7 @@ class LogoBar extends React.Component {
                             </optgroup>
                         </select>
                     </fieldset>
-                    <fieldset className="col-xs-5">
+                    <fieldset className="col-xs-7">
                         <legend>Display</legend>
                         <label>
                             <input type="checkbox" name="displayKanji" value="1" onChange={onChangeSutra}/>Kanji
@@ -45,16 +45,6 @@ class LogoBar extends React.Component {
                         <label>
                             <input type="checkbox" name="displayCharacterNum" onChange={onChangeSutra}/>Character #
                         </label>
-                    </fieldset>
-                    <fieldset className="col-xs-5">
-                        <legend>Layout</legend>
-                        <label>
-                            <input type="radio" name="layout" value="english"/>English
-                        </label>
-                        <label>
-                            <input type="radio" name="layout" value="english"/>Kanji
-                        </label>
-
                     </fieldset>
                 </div>
 
