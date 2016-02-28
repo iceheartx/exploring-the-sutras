@@ -15,7 +15,7 @@ class LogoBar extends React.Component {
                 <div className={cx('col-xs-18', (this.props.expandedMenu) ? '' : 'hidden' )}>
                     <fieldset className="col-xs-8">
                         <legend>Select a Sutra</legend>
-                        <select name="sutra" onChange={onChangeSutra}>
+                        <select name="sutra" defaultValue="heartsutra" onChange={onChangeSutra}>
                             <option>Select One</option>
                             <optgroup label="Maka Hannya Haramitta Shin Gyo">
                                 <option value="heartsutra">Heart of Great Perfect Wisdom Sutra</option>
@@ -31,7 +31,7 @@ class LogoBar extends React.Component {
                     <fieldset className="col-xs-7">
                         <legend>Display</legend>
                         <label>
-                            <input type="checkbox" name="displayKanji" value="1" onChange={onChangeSutra}/>Kanji
+                            <input type="checkbox" name="displayKanji" defaultChecked value="1" onChange={onChangeSutra}/>Kanji
                         </label>
                         <label>
                             <input type="checkbox" name="displayHiragana" onChange={onChangeSutra}/>Hiragana
