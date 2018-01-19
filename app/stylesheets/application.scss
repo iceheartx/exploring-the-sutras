@@ -1,7 +1,8 @@
 @import './styleguide';
 
-@import "./base/measures";
-@import "./base/typography";
+@import "./base/_measures.scss";
+@import "./base/_typography.scss";
+@import "./base/_colors.scss";
 
 @import './module/button';
 @import "./module/kanjiblob";

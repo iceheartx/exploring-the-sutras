@@ -1,7 +1,7 @@
 const Bootstrap = require('../bootstrap');
 const React = require('react');
 const types = React.PropTypes;
-
+const cx = require('classnames');
 
 const useStore = require('./use_store');
 
@@ -34,6 +34,15 @@ class Application extends React.Component {
         });
     }
 
+    isOnlyKanji = function () {
+
+        return this.state.displayKanji && !(
+            this.state.displayHiragana &&
+            this.state.displayRomaji &&
+            this.state.displayEnglish &&
+            this.state.displayCharacterNum);
+    }.bind(this);
+
     setView() {
         const view = this.state.view || 'splash';
         const state = this.state;
@@ -44,9 +53,14 @@ class Application extends React.Component {
             case 'sutra':
                 if (this.state.sutra) {
                     const kanjiblobData = require('./../sutras/' + this.state.sutra + '.js');
-                    content = <div className="row"><Sutra {...{kanjiblobData, store: state}} /></div>;
+                    content = (<div className={cx('row', (!this.isOnlyKanji()) ? 'showBorder' : '')}>
+                        <Sutra {...{
+                            kanjiblobData,
+                            store: state
+                        }} />
+                    </div>);
                 } else {
-                    content='';
+                    content = '';
                 }
 
                 break;
@@ -77,14 +91,11 @@ class Application extends React.Component {
     };
 
     render() {
-
         const store = this.props;
         return (
             <div className="page">
-                <Header {...{store, onChangeSutra: this.onChangeSutra}} />
-                <div className="container">
-                    {content}
-                </div>
+                <Header {...{...store, onChangeSutra: this.onChangeSutra}} />
+                {content}
             </div>
         );
     };

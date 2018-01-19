@@ -9,80 +9,84 @@
       <div class="row">
         <div class="blob col-xs-4 title">
           <div class="kanji">心</div>
-          <div class="romaji">shin</div>
-          <div class="english">heart</div>
-          <div class="hiragana">しん</div>
+          <div>
+            <div class="romaji">shin</div>
+            <div class="english">heart</div>
+            <div class="hiragana">しん</div>
+          </div>
         </div>
         <div class="row">
         <div class="blob col-xs-4">
-          <div class="kanji">心</div>
-          <div class="romaji">shin</div>
-          <div class="english">heart</div>
-          <div class="hiragana">しん</div>
+          <div class="kanji"><a href="#">心</a></div>
+          <div class="meta">
+            <div class="romaji">shin</div>
+            <div class="english">heart</div>
+            <div class="hiragana">しん</div>
+          </div>
         </div>
       </div>
     </div>
 ***/
 
 .row.title {
-  width: 100%;
-  border-bottom: 3px solid $black;
+  background-color: silver;
+}
+
+body {
+  color: black;
 }
 
 .blob {
-  min-width: 150px;
-  height: 80px;
-  color: black;
+  display: flex;
+  flex-basis: content;
 
   .title {
     font-weight: bold;
     border: 0px;
-
   }
 
   &:not(.title) {
-    border-bottom: 1px solid $black;
-    border-right: 1px solid $black;
+    //border-bottom: 1px solid $black;
+    //border-right: 1px solid $black;
   }
   .kanji {
-    &.hidden {
-      display: none;
-    }
-
-    color: $black;
-    font-weight: bold;
-    float: left;
+    font-size: 30px;
   }
+  .meta {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 
-  .romaji {
-    &.hidden {
-      display: none;
+    margin-left: 5px;
+    font-size: 12px;
+
+    .romaji, .characterNum, .english, .hiragana {
+      padding-left: 5px;
+      height:23px;
+      vertical-align: middle;
     }
-
-    float: right;
-  }
-  .characterNum {
-    &.hidden {
-      display: none;
+    .romaji {
+      background-color: #c4e8c0;
+      text-transform: capitalize;
     }
-    float: left;
-  }
-  .english {
-    width: 100%;
-    font-size: 8px;
-    clear: both;
-    text-align: center;
-    background: $gray;
-
-    &.hidden {
-      display: none;
+    .characterNum {
+      background-color: yellow;
+    }
+    .english {
+      font-size: 8px;
+      background-color: $gray;
+    }
+    .hiragana {
+      background-color: #c6c5ee;
     }
   }
-  .hiragana {
-    &.hidden {
-      display: none;
-    }
+}
 
-    float: right;
-  }
+.hidden {
+  display: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
 }

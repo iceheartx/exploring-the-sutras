@@ -1,9 +1,54 @@
 .page {
   margin-top: $header-bar-height;
-  width: 100%;
-  height: 100%;
 }
 
 .content {
   width: $content-width;
+}
+
+.root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+.title {
+  width: 50px;
+}
+.sutra-container-kanji {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.sutra-container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 100vh;
+  overflow-x: scroll;
+}
+
+.blob {
+  height: 50px;
+  display: flex;
+}
+
+.sutra-body-kanji, .sutra-body {
+  display: flex;
+  height: calc(100vh - 40px);
+}
+
+.sutra-body {
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+}
+
+.sutra-body-kanji {
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  flex-grow: 1;
 }

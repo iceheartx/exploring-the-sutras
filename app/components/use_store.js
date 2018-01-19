@@ -8,11 +8,11 @@ const useStore = Component => class extends React.Component {
 
         this.state = {
             store: {
-                displayKanji: true,
-                displayHiragana: false,
-                displayRomaji: false,
-                displayEnglish: false,
-                displayCharacterNum: false,
+                displayKanji        : true,
+                displayHiragana     : true,
+                displayRomaji       : true,
+                displayEnglish      : false,
+                displayCharacterNum : false,
                 view: 'sutra',
                 sutra: 'heartsutra'
             },
