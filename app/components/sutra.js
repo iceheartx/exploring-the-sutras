@@ -9,7 +9,7 @@ class sutra extends React.Component {
         console.log(kanjiblobData, store);
         return (
             <div className={cx(store.displayKanji ? 'sutra-container-kanji' : 'sutra-container')}>
-                <div className="title">
+                <div className={cx(store.displayKanji ? 'title-kanji' : 'title')}>
                     {kanjiblobData.title.map(function (kanjiBlob) {
                         kanjiBlob.title='true';
                         return <Kanjiblob {...{kanjiBlob, store}} />;

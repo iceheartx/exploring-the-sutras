@@ -39,16 +39,14 @@ body {
 .blob {
   display: flex;
   flex-basis: content;
+  height: 50px;
+  display: flex;
 
   .title {
     font-weight: bold;
     border: 0px;
   }
 
-  &:not(.title) {
-    //border-bottom: 1px solid $black;
-    //border-right: 1px solid $black;
-  }
   .kanji {
     font-size: 30px;
   }
@@ -58,10 +56,13 @@ body {
     flex-direction: column;
 
     margin-left: 5px;
+    margin-right: 5px;
     font-size: 12px;
 
     .romaji, .characterNum, .english, .hiragana {
+      text-align: center;
       padding-left: 5px;
+      padding-right: 5px;
       height:23px;
       vertical-align: middle;
     }

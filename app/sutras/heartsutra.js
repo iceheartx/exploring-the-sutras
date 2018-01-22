@@ -1,10 +1,10 @@
 const heartsutra = {
     sutra: [
         {key: '001', kanji: '觀', hiragana: 'かん', romaji: 'kan', english: 'kan transliteration for "Kanjizai" aka "Kanzeon"'},
-        {key: '002', kanji: '自', hiragana: 'じ', romaji: 'ji', english: 'kan transliteration for "Kanjizai" aka "Kanzeon"'},
-        {key: '003', kanji: '在', hiragana: 'ざい', romaji: 'zai', english: 'kan transliteration for "Kanjizai" aka "Kanzeon"'},
+        {key: '002', kanji: '自', hiragana: 'じ', romaji: 'ji', english: 'ji transliteration for "Kanjizai" aka "Kanzeon"'},
+        {key: '003', kanji: '在', hiragana: 'ざい', romaji: 'zai', english: 'zai transliteration for "Kanjizai" aka "Kanzeon"'},
         {key: '004', kanji: '菩', hiragana: 'ぼ', romaji: 'bo', english: 'bo transliteration for bodhisattvha'},
-        {key: '005', kanji: '薩', hiragana: 'さつ', romaji: 'satsu', english: 'sat transliteration for bodhisattvha'},
+        {key: '005', kanji: '薩', hiragana: 'さつ', romaji: 'satsu', english: 'satsu transliteration for bodhisattvha'},
         {key: '006', kanji: '行', hiragana: 'ぎょう', romaji: 'gyō', english: 'thing, to go'},
         {key: '008', kanji: '深', hiragana: 'じん', romaji: 'jin', english: 'profound'},
         {key: '009', kanji: '般', hiragana: 'はん', romaji: 'han', english: 'Han in transliteration of Prajñā'},
@@ -161,7 +161,6 @@ const heartsutra = {
         {key: '160', kanji: '故', hiragana: 'こ', romaji: 'ko', english: 'late, deceased'},
         {key: '161', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '162', kanji: '有', hiragana: 'う', romaji: 'u', english: 'exist, possess, occur'},
-        {key: '162', kanji: '有', hiragana: 'う', romaji: 'u', english: 'exist, possess, occur'},
         {key: '163', kanji: '恐', hiragana: 'く', romaji: 'ku', english: 'fear'},
         {key: '164', kanji: '怖', hiragana: 'ふ', romaji: 'fu', english: 'frighten?'},
         {key: '165', kanji: '遠', hiragana: 'おん', romaji: 'on', english: 'distant, far, (literary) to distance oneself from'},
@@ -269,8 +268,8 @@ const heartsutra = {
         {key: '267', kanji: '經', hiragana: 'ぎょ', romaji: 'gyo', english: 'sutra'},
     ],
     title: [
-        {key: '001', kanji: '摩', hiragana: 'ま', romaji: 'Maka', english: 'Great'},
-        {key: '002', kanji: '訶', hiragana: 'か', romaji: 'Maka', english: 'Great'},
+        {key: '001', kanji: '摩', hiragana: 'ま', romaji: 'Ma', english: 'Great'},
+        {key: '002', kanji: '訶', hiragana: 'か', romaji: 'Ka', english: 'Great'},
         {key: '003', kanji: '般', hiragana: 'はん', romaji: 'Han', english: 'Wisdom (transliteration of Prajñā)'},
         {key: '004', kanji: '若', hiragana: 'にゃ', romaji: 'Nya', english: 'Wisdom (transliteration of Prajñā)'},
         {key: '005', kanji: '波', hiragana: 'は', romaji: 'Ha', english: 'Perfect (transliteration of Pāramitā)'},

@@ -16,11 +16,11 @@ class LogoBar extends React.Component {
             displayCharacterNum,
             onChangeSutra
         } = this.props;
-        console.log("PROPS", this.props);
+        let menutext = (displayKanji) ? '献立' : 'Menu';
         return (
             <div className={cx('row', 'logo-bar', (this.props.expandedMenu) ? 'expanded' : '')}>
                 <a className={cx('col-xs-3', 'logo-button', (this.props.expandedMenu) ? 'expanded' : '')}
-                   onClick={this.props.onClick}>献立</a>
+                   onClick={this.props.onClick}>{menutext}</a>
                 <div className={cx('col-xs-18', (this.props.expandedMenu) ? '' : 'hidden')}>
                     <fieldset className="col-xs-8">
                         <legend>Select a Sutra</legend>

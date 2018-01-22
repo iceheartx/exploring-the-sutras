@@ -8,7 +8,7 @@ const useStore = Component => class extends React.Component {
 
         this.state = {
             store: {
-                displayKanji        : true,
+                displayKanji        : false,
                 displayHiragana     : true,
                 displayRomaji       : true,
                 displayEnglish      : false,
