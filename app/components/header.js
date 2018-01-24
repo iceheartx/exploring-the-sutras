@@ -83,6 +83,12 @@ class LogoBar extends React.Component {
     }
 }
 LogoBar.propTypes = {
+    displayKanji: types.bool.isRequired,
+    displayHiragana: types.bool.isRequired,
+    displayRomaji: types.bool.isRequired,
+    displayEnglish: types.bool.isRequired,
+    displayCharacterNum: types.bool.isRequired,
+
     onClick: types.func.isRequired,
     expandedMenu: types.bool,
     onChangeSutra: types.func.isRequired

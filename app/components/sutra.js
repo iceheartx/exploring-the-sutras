@@ -6,7 +6,6 @@ const cx = require('classnames');
 class sutra extends React.Component {
     render() {
         const {kanjiblobData, store} = this.props;
-        console.log(kanjiblobData, store);
         return (
             <div className={cx(store.displayKanji ? 'sutra-container-kanji' : 'sutra-container')}>
                 <div className={cx(store.displayKanji ? 'title-kanji' : 'title')}>

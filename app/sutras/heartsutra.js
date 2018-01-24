@@ -1,6 +1,6 @@
 const heartsutra = {
     sutra: [
-        {key: '001', kanji: '觀', hiragana: 'かん', romaji: 'kan', english: 'kan transliteration for "Kanjizai" aka "Kanzeon"'},
+        {key: '001', kanji: '観', hiragana: 'かん', romaji: 'kan', english: 'kan transliteration for "Kanjizai" aka "Kanzeon"'},
         {key: '002', kanji: '自', hiragana: 'じ', romaji: 'ji', english: 'ji transliteration for "Kanjizai" aka "Kanzeon"'},
         {key: '003', kanji: '在', hiragana: 'ざい', romaji: 'zai', english: 'zai transliteration for "Kanjizai" aka "Kanzeon"'},
         {key: '004', kanji: '菩', hiragana: 'ぼ', romaji: 'bo', english: 'bo transliteration for bodhisattvha'},
@@ -67,7 +67,7 @@ const heartsutra = {
         {key: '066', kanji: '不', hiragana: 'ふ', romaji: 'fu', english: 'prefix (non)'},
         {key: '067', kanji: '垢', hiragana: 'く', romaji: 'ku', english: 'grime, dirt'},
         {key: '068', kanji: '不', hiragana: 'ふ', romaji: 'fu', english: 'prefix (non)'},
-        {key: '069', kanji: '淨', hiragana: 'じょう', romaji: 'jō', english: 'pure, unspoiled'},
+        {key: '069', kanji: '浄', hiragana: 'じょう', romaji: 'jō', english: 'pure, unspoiled'},
         {key: '070', kanji: '不', hiragana: 'ふ', romaji: 'fu', english: 'prefix (non)'},
         {key: '071', kanji: '増', hiragana: 'ぞう', romaji: 'zō', english: 'increase'},
         {key: '072', kanji: '不', hiragana: 'ふ', romaji: 'fu', english: 'prefix (non)'},
@@ -92,10 +92,10 @@ const heartsutra = {
         {key: '091', kanji: '意', hiragana: 'に', romaji: 'ni', english: 'idea, mind, heart, desire'},
         {key: '092', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '093', kanji: '色', hiragana: 'しき', romaji: 'shiki', english: 'color? kin?'},
-        {key: '094', kanji: '聲', hiragana: 'しょう', romaji: 'shō', english: 'voice'},
+        {key: '094', kanji: '声', hiragana: 'しょう', romaji: 'shō', english: 'voice'},
         {key: '095', kanji: '香', hiragana: 'こう', romaji: 'kō', english: 'fragrance'},
         {key: '096', kanji: '味', hiragana: 'み', romaji: 'mi', english: 'taste'},
-        {key: '097', kanji: '觸', hiragana: 'そく', romaji: 'soku', english: 'touch'},
+        {key: '097', kanji: '触', hiragana: 'そく', romaji: 'soku', english: 'touch'},
         {key: '098', kanji: '法', hiragana: 'ほ', romaji: 'ho', english: 'dharma'},
         {key: '099', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '100', kanji: '眠', hiragana: 'げん', romaji: 'gen', english: '?'},
@@ -113,7 +113,7 @@ const heartsutra = {
         {key: '112', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '113', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '114', kanji: '明', hiragana: 'みょう', romaji: 'myō', english: 'clear, bright'},
-        {key: '115', kanji: '盡', hiragana: 'じん', romaji: 'jin', english: 'exhaust? deplete?'},
+        {key: '115', kanji: '尽', hiragana: 'じん', romaji: 'jin', english: 'exhaust? deplete?'},
         {key: '116', kanji: '乃', hiragana: 'ない', romaji: 'nai', english: 'then, really, as it turned out'},
         {key: '117', kanji: '至', hiragana: 'し', romaji: 'shi', english: 'male given name?'},
         {key: '118', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
@@ -123,7 +123,7 @@ const heartsutra = {
         {key: '122', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '123', kanji: '老', hiragana: 'ろう', romaji: 'rō', english: 'old age'},
         {key: '124', kanji: '死', hiragana: 'し', romaji: 'shi', english: 'death'},
-        {key: '125', kanji: '盡', hiragana: 'じん', romaji: 'jin', english: 'exhaust? deplete?'},
+        {key: '125', kanji: '尽', hiragana: 'じん', romaji: 'jin', english: 'exhaust? deplete?'},
         {key: '126', kanji: '無', hiragana: 'む', romaji: 'mu', english: 'No'},
         {key: '127', kanji: '苦', hiragana: 'く', romaji: 'ku', english: 'dukkha'},
         {key: '128', kanji: '集', hiragana: 'す', romaji: 'shu', english: 'kind, type'},
@@ -178,7 +178,7 @@ const heartsutra = {
         {key: '177', kanji: '三', hiragana: 'さん', romaji: 'san', english: 'three'},
         {key: '178', kanji: '世', hiragana: 'せ', romaji: 'se', english: 'generation, age'},
         {key: '179', kanji: '諸', hiragana: 'しょ', romaji: 'sho', english: 'various, many, together'},
-        {key: '180', kanji: '佛', hiragana: 'ぶつ', romaji: 'butsu', english: 'Buddha'},
+        {key: '180', kanji: '仏', hiragana: 'ぶつ', romaji: 'butsu', english: 'Buddha'},
         {key: '181', kanji: '依', hiragana: 'え', romaji: 'e', english: 'rely on?'},
         {key: '182', kanji: '般', hiragana: 'はん', romaji: 'han', english: 'Han in transliteration of Prajñā'},
         {key: '183', kanji: '若', hiragana: 'にゃ', romaji: 'nya', english: 'Nya in transliteration of Prajñā'},
@@ -227,8 +227,8 @@ const heartsutra = {
         {key: '226', kanji: '一', hiragana: 'いっ', romaji: 'is', english: 'one'},
         {key: '227', kanji: '切', hiragana: 'さい', romaji: 'sai', english: 'cut'},
         {key: '238', kanji: '苦', hiragana: 'く', romaji: 'ku', english: 'dukkha'},
-        {key: '239', kanji: '眞', hiragana: 'しん', romaji: 'shin', english: 'true, reality, Buddhist sect'},
-        {key: '230', kanji: '實', hiragana: 'じつ', romaji: 'jitsu', english: 'truth, reality'},
+        {key: '239', kanji: '真', hiragana: 'しん', romaji: 'shin', english: 'true, reality, Buddhist sect'},
+        {key: '230', kanji: '実', hiragana: 'じつ', romaji: 'jitsu', english: 'truth, reality'},
         {key: '231', kanji: '不', hiragana: 'ふ', romaji: 'fu', english: 'prefix (non)'},
         {key: '232', kanji: '虚 ', hiragana: 'こ', romaji: 'ko', english: 'false'},
         {key: '233', kanji: '故', hiragana: 'こ', romaji: 'ko', english: 'late, deceased'},
@@ -277,7 +277,7 @@ const heartsutra = {
         {key: '007', kanji: '蜜', hiragana: 'みっ', romaji: 'Mit', english: 'Perfect (transliteration of Pāramitā)'},
         {key: '008', kanji: '多', hiragana: 'た', romaji: 'Ta', english: 'Perfect (transliteration of Pāramitā)'},
         {key: '009', kanji: '心', hiragana: 'しん', romaji: 'Shin', english: 'Heart'},
-        {key: '010', kanji: '經', hiragana: 'ぎょ', romaji: 'Gyo', english: 'Sutra'}
+        {key: '010', kanji: '経', hiragana: 'ぎょ', romaji: 'Gyo', english: 'Sutra'}
     ]
 };
 
