@@ -3,13 +3,23 @@ const types = React.PropTypes;
 const cx = require('classnames');
 
 class kanjiblob extends React.Component {
+    clickKanji = function(evnt) {
+        let url;
+        if (evnt.altKey) {
+            url = "http://jisho.org/search/"+evnt.target.innerHTML+' #kanji'
+        } else {
+            url = 'https://en.wiktionary.org/wiki/' + evnt.target.innerHTML + '#Japanese'
+        }
+        window.open(url);
+    }.bind(this);
+
     render() {
         const {kanji, hiragana, romaji, english, key} = this.props.kanjiBlob;
         const classNames = cx('blob');
         return (
             <div className={classNames}>
                 <div className={cx('kanji', (this.props.store.displayKanji !== true) ? 'hidden' : '') }>
-                    <a href={'https://en.wiktionary.org/wiki/' + kanji + '#Japanese'}
+                    <a onClick={this.clickKanji}
                        target="new">{kanji}</a></div>
                 <div className={cx('meta', (this.props.store.displayCharacterNum !== true
                     && this.props.store.displayCharacterNum !== true

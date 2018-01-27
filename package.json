@@ -61,7 +61,7 @@
     "gulp-watch": "^4.3.5",
     "jasmine-ajax": "^3.2.0",
     "jasmine_dom_matchers": "1.1.0",
-    "jquery": "^2.1.4",
+    "jquery": "~3.3.1",
     "lazypipe": "^1.0.1",
     "lsof": "^0.1.0",
     "merge-stream": "^1.0.0",
